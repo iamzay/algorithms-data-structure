@@ -1,5 +1,5 @@
 let cartesianProduct=(()=>{
-  let result=[];
+  let result;
 
   function cartesianProduct(sets,n,current){
     if(n>=sets.length){
@@ -13,6 +13,7 @@ let cartesianProduct=(()=>{
   }
 
   return function(sets){
+    result=[];
     cartesianProduct(sets,0,[]);
     return result;
   }

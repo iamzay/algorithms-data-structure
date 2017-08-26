@@ -1,5 +1,5 @@
 let combinations=(()=>{
-  let result=[];
+  let result;
 
   function combinations(arr,cnt,start,n,current){
     if(n>=cnt){
@@ -15,6 +15,7 @@ let combinations=(()=>{
 
   /* 从arr中取k个*/
   return function(arr,k){
+    result=[];
     if(k>arr.length){
       return [];
     }
