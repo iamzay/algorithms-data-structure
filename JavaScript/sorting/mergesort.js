@@ -48,5 +48,8 @@ let mergeSort=(()=>{
   }
 })();
 
-let param=[5,4,3,2,1];
-console.log(mergeSort(param));
+/* test
+ * let param=[5,4,3,2,1];
+ * console.log(mergeSort(param));*/
+
+export default mergeSort;
