@@ -7,11 +7,12 @@ let permutations1=(()=>{
     }
 
     for(let i=0;i<arr.length;++i){
-      /* 确保在求permutation前数组已排序
+      /* 难点1:确保在求permutation前数组已排序
        * 每个位置不能选之前选过的*/
       if(i&&arr[i]===arr[i-1]){
         continue;
       }
+      /* 难点2:检查这个数能不能选*/
       let ok=1,c1=0,c2=0;
       for(let j=0;j<cnt;++j){
         if(current[j]===arr[i]){
