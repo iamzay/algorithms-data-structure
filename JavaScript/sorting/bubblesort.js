@@ -1,3 +1,4 @@
+/* 冒泡排序:从后往前遍历，第一次遍历找到最小的元素，第二次遍历找到第二小的*/
 function compare(a, b) {
   return a - b;
 }
@@ -14,5 +15,8 @@ function bubbleSort(arr,cmp){
   return arr;
 }
 
-let param=[5,4,1,3,2];
-console.log(bubbleSort(param));
+/* test
+ * let param=[5,4,1,3,2];
+ * console.log(bubbleSort(param));*/
+
+export default bubbleSort;

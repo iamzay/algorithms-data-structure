@@ -20,5 +20,8 @@ function selectionSort(arr,cmp){
   return arr;
 }
 
-let param=[5,4,2,3,1];
-console.log(selectionSort(param));
+/* test
+ * let param=[5,4,2,3,1];
+ * console.log(selectionSort(param));*/
+
+export default selectionSort;

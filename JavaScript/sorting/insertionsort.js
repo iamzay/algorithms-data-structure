@@ -14,8 +14,9 @@ function insertionSort(arr,cmp){
   return arr;
 }
 
-let param=[5,4,2,3,1];
-console.log(insertionSort(param));
+/* test1
+ * let param=[5,4,2,3,1];
+ * console.log(insertionSort(param));*/
 
 /* modified version*/
 function insertionSort1(arr,cmp){
@@ -31,5 +32,8 @@ function insertionSort1(arr,cmp){
   return arr;
 }
 
-param=[5,3,2,4,1];
-console.log(insertionSort1(param));
+/* test2
+ * param=[5,3,2,4,1];
+ * console.log(insertionSort1(param));*/
+
+export default insertionSort;
