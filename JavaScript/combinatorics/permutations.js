@@ -43,7 +43,8 @@ let permutations1=(()=>{
 })();
 
 /* test */
-let res=permutations1([1,2,3]);
+let param=[1,2,3];
+let res=permutations1(param);
 console.log(res);
 /* [ [ 1, 2, 3 ],
  *   [ 1, 3, 2 ],
@@ -56,3 +57,33 @@ res=permutations1([1,1,1]);
 console.log(res);
 /* [ [ 1, 1, 1 ] ]*/
 
+/* 下面的方法需确保数组中无重复*/
+let permutations2=(()=>{
+  let res;
+
+  function swap(arr,i,j){
+    const tmp=arr[i];
+    arr[i]=arr[j];
+    arr[j]=tmp;
+  }
+
+  function permutations2(arr,start){
+    if(start>=arr.length){
+      return res.push(arr.concat());
+    }
+
+    for(let i=start;i<arr.length;++i){
+      swap(arr,i,start);
+      permutations2(arr,start+1);
+      swap(arr,i,start);
+    }
+  }
+  return function(arr){
+    res=[];
+    permutations2(arr,0);
+    return res;
+  }
+})();
+
+res=permutations2(param);
+console.log(res);
