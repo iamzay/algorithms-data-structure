@@ -1,3 +1,4 @@
+/* 选择排序:每次迭代选出剩余数组元素中最小的数*/
 function compare(a,b){
   return a-b;
 }
