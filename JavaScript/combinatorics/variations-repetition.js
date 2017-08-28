@@ -14,6 +14,10 @@ let variationsWithRepetion=(()=>{
     }
   }
   return function(arr,n){
+    if(arr.length<n){
+      return [];
+    }
+
     res=[];
     variationsWithRepetion(arr,n,0,[]);
     return res;
