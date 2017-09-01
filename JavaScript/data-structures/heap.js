@@ -35,6 +35,7 @@ class Heap {
     const h=this._heap;
     const cmp=this._cmp;
     const size=h.length;
+    const value=h[index];
     let current=index;
     while(2*current<size){
       let k=2*current;
@@ -45,14 +46,14 @@ class Heap {
         tmp=k+1;
       }
       /* current同tmp处的值比较 */
-      if(cmp(h[tmp],h[index])<0){
+      if(cmp(h[tmp],value)<0){
         h[current]=h[tmp];
       } else{
         break;
       }
       current=tmp;
     }
-    h[current]=h[index];
+    h[current]=value;
   }
 
   deleteMin(){
@@ -70,14 +71,15 @@ class Heap {
   }
 }
 
-const h=new Heap();
-for(let i=1;i<10;++i){
-  let tmp=Math.floor(Math.random()*9+1);
-  h.add(tmp);
-}
-console.log(h._heap);
-for(let i=1;i<10;++i){
-  console.log(h.deleteMin());
-}
+/* test */
+/* const h=new Heap();
+ * for(let i=1;i<10;++i){
+ *   let tmp=Math.floor(Math.random()*9+1);
+ *   h.add(tmp);
+ * }
+ * console.log(h._heap);
+ * for(let i=1;i<10;++i){
+ *   console.log(h.deleteMin());
+ * }*/
 
-/* export default Heap;*/
+export default Heap;
