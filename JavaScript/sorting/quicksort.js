@@ -51,14 +51,15 @@ function quicksort(arr,cmp){
   return arr;
 }
 
-const cnt=10;
-const size=10;
-for(let j=0;j<cnt;++j){
-  let arr=[];
-  for(let i=0;i<size;++i){
-    arr.push(Math.floor(Math.random()*size));
-  }
-  console.log(arr);
-  console.log(quicksort(arr));
-  console.log("\n");
-}
+/* const cnt=10;
+ * const size=10;
+ * for(let j=0;j<cnt;++j){
+ *   let arr=[];
+ *   for(let i=0;i<size;++i){
+ *     arr.push(Math.floor(Math.random()*size));
+ *   }
+ *   console.log(arr);
+ *   console.log(quicksort(arr));
+ *   console.log("\n");
+ * }*/
+export default quicksort;
